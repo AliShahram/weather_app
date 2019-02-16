@@ -1,0 +1,28 @@
+/* Basic TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: "Roboto",sans-serif;
+}
+
+
+.hero-body {
+  background-color: #C0C0C0;
+  padding: 40px;
+}
+
+.hero-body h1 {
+  color: white;
+}
+
+.field {
+  padding: 15px;
+}
+
+.control {
+  
+}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 from .models import City
 from .forms import CityForm
@@ -31,3 +31,11 @@ def index(request):
     context = {'weather_data' : weather_data, 'form' : form}
 
     return render(request, 'weather/index.html', context)
+
+
+def delete(request):
+    city = City.objects.all()
+    last_city = city.reverse()[0]
+
+    last_city.delete()
+    return redirect('/home')
